@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { LoaderComponent } from '../../components/loader/loader.component';
-import { CommonModule } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-login',
@@ -11,10 +11,16 @@ import { CommonModule } from '@angular/common';
   styleUrl: './login.component.scss',
 })
 export class LoginComponent implements OnInit {
-  isLoading!: boolean;
+  isLoading: boolean = true;
+  isBrowser: boolean = false;
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
   ngOnInit(): void {
-    this.loadContentAfterDelay();
-    this.loadVideo();
+    this.isBrowser = isPlatformBrowser(this.platformId);
+    if (this.isBrowser) {
+      this.loadVideo();
+      this.loadContentAfterDelay();
+    }
   }
 
   loadVideo() {
@@ -29,6 +35,6 @@ export class LoginComponent implements OnInit {
   loadContentAfterDelay() {
     setTimeout(() => {
       this.isLoading = false;
-    }, 4000); // 4000 milliseconds = 4 seconds
+    }, 4000);
   }
 }
