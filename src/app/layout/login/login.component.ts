@@ -18,23 +18,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.isBrowser = isPlatformBrowser(this.platformId);
     if (this.isBrowser) {
-      this.loadVideo();
-      this.loadContentAfterDelay();
+      this.isLoading = false;
     }
-  }
-
-  loadVideo() {
-    const video = document.querySelector(
-      '.background-video'
-    ) as HTMLVideoElement;
-    video.onloadeddata = () => {
-      this.isLoading = false;
-    };
-  }
-
-  loadContentAfterDelay() {
-    setTimeout(() => {
-      this.isLoading = false;
-    }, 4000);
   }
 }

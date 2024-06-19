@@ -1,6 +1,7 @@
 <div class="content">
   <app-card title="Two-Step Verification" subtitle="We sent a verification code to your mobile.
-     Enter the code from the mobile in the field below." url="/login" text="Didn't get the code?" cardText="Resend">
+     Enter the code from the mobile in the field below." mobileNumber="*********757" url="/login"
+    text="Didn't get the code?" cardText="Resend">
     <div class="input-line" [formGroup]="verificationForm">
       <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*" appFocus [appAutoTab]="input2">
       <input #input2 type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*" [appAutoTab]="input3">

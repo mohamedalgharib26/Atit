@@ -14,4 +14,5 @@ export class CardComponent {
   @Input() url!: string;
   @Input() text!: string;
   @Input() cardText!: string;
+  @Input() mobileNumber!: string;
 }

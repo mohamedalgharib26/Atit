@@ -1,7 +1,13 @@
 <div class="card">
   <img src="../../../assets/logo.svg" alt="Saudi Water Authority" style="margin-bottom: 20px;">
   <h2>{{title}}</h2>
-  <p>{{subtitle}}</p>
+  <p>{{subtitle}} </p>
+  <span style="color: white;
+    text-align: left;
+    margin: 0 47px;
+    position: absolute;
+    left: 14px;
+    margin-top: 23px;">{{mobileNumber}}</span>
   <ng-content></ng-content>
   <p class="card-text">{{text}} <a routerLink={{url}}>{{cardText}}</a></p>
 </div>
