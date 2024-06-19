@@ -1,0 +1,17 @@
+<div class="content">
+  <app-card title="Log in to your account" subtitle="Welcome back! Please enter your details." url="/xyz"
+    text="Don't have an account? " cardText="Sign up">
+    <div class="inputs">
+      <input type="text" placeholder=" Enter Your Email" class="account">
+      <input type="text" placeholder="**********" class="account">
+    </div>
+    <div class="radio-inputs">
+      <div class="radio">
+        <input id="radio" type="radio">
+        <label for="radio">Remember for 30 days</label>
+      </div>
+      <a href="">Forget Password</a>
+    </div>
+    <button (click)="Submit()">login</button>
+  </app-card>
+</div>

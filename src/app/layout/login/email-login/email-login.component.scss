@@ -1,0 +1,82 @@
+.inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  justify-items: center;
+  justify-self: center;
+  width: calc(100% - 20px);
+  position: relative;
+}
+.radio-inputs {
+  width: 98%;
+
+  display: flex;
+  justify-content: space-around;
+  justify-self: center;
+  justify-items: center;
+
+  margin: 20px 0;
+  .radio {
+    display: flex;
+    justify-items: center;
+    justify-self: center;
+    justify-content: center;
+    #radio {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: px;
+      border-radius: 50%;
+      margin-right: 3px;
+      border: 2px solid #8aa0a2;
+      background-color: #3e555a;
+      position: relative;
+      cursor: pointer;
+      background-image: linear-gradient(
+          rgba(255, 255, 255, 0.32),
+          rgba(255, 255, 255, 0.32)
+        ),
+        linear-gradient(rgba(94, 94, 94, 0.6), rgba(94, 94, 94, 0.6));
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      border-image-source: linear-gradient(
+          0deg,
+          rgba(94, 94, 94, 0.6),
+          rgba(94, 94, 94, 0.6)
+        ),
+        linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.32),
+          rgba(255, 255, 255, 0.32)
+        );
+      border-image-slice: 1;
+      &:checked {
+        border: 5px solid #eee;
+        background-color: #3e555a;
+      }
+    }
+    label {
+      color: rgba(255, 255, 255, 0.96);
+      font-family: "SF Pro Display", sans-serif;
+      font-size: 16px;
+      font-weight: 510;
+      line-height: 18px;
+    }
+  }
+
+  a {
+    font-family: "SF Pro Display", sans-serif;
+    font-size: 16px;
+    font-weight: 510;
+    line-height: 18px;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.56);
+    background-blend-mode: lighten;
+    text-decoration: none; /* إزالة التزيين الافتراضي للروابط */
+  }
+  a:hover {
+    background: rgba(84, 84, 84, 1);
+    background-blend-mode: color-dodge;
+    transition: all 0.3s ease-in-out;
+  }
+}

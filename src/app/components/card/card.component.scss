@@ -1,0 +1,71 @@
+.container {
+  width: 424px;
+  height: 440px;
+  z-index: -99;
+  background: linear-gradient(
+    to right,
+    rgb(59, 72, 70),
+    rgb(58, 70, 70),
+    rgb(65, 75, 74)
+  );
+
+  backdrop-filter: blur(10px);
+  background-blend-mode: luminosity, darken;
+  border-radius: 20px; /* Ensure border radius matches container */
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "SF Pro Display", sans-serif;
+  border: 0;
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -95;
+    width: 65%;
+    height: 65%;
+    left: -1px;
+    top: -1.5px;
+    border-top-left-radius: 25px;
+    border-top: 1.5px solid #484e50;
+    border-left: 1.5px solid rgba(128, 128, 128, 0.3);
+    background-blend-mode: luminosity;
+  }
+
+  h2 {
+    margin: 10px 0;
+
+    color: rgba(255, 255, 255, 0.96);
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: center;
+  }
+  p {
+    margin: 5px 0 15px 0;
+    //styleName: Subheadline;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    color: #94a7a5;
+  }
+  .card-text {
+    margin-top: 32px;
+    //styleName: Text sm/Regular;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    background-blend-mode: lighten, color-dodge;
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}
