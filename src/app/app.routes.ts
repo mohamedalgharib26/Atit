@@ -3,12 +3,12 @@ import { LoginComponent } from './layout/login/login.component';
 import { AccountLoginComponent } from './layout/login/account-login/account-login.component';
 import { AccountVerificationComponent } from './layout/login/account-verification/account-verification.component';
 import { EmailLoginComponent } from './layout/login/email-login/email-login.component';
+import { AppComponent  } from "./AppComponent";
 
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'login',
-    pathMatch: 'full',
+    component:AppComponent
   },
   {
     path: 'login',
